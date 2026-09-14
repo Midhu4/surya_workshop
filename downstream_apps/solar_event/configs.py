@@ -29,16 +29,16 @@ from workshop_infrastructure.configs import (  # re-exported for convenience
 
 
 @dataclass
-class FlareDataConfig(DataConfig):
+class SolarDataConfig(DataConfig):
     """DataConfig plus the flare-catalog alignment settings used by ``FlareDSDataset``.
 
     These four keys are what makes this app's ``data:`` section different from any other
     downstream task's. Swap them for your own when you fork.
     """
     # Path to the label catalog (relative paths resolve against the config file's dir).
-    flare_index_path: str = ""
+    solar_event_path: str = ""
     # Column in the catalog holding the event timestamp.
-    ds_time_column: str = "start_time"
+    ds_time_column: str = "Start_Date"
     # Max allowed gap when matching catalog events to Surya timesteps.
     ds_time_tolerance: str = "4d"
     # "forward" uses the solar state *before* the flare (causal prediction).
@@ -51,12 +51,12 @@ class FlareDataConfig(DataConfig):
 
 # The app's entry point. Identical to load_config() except that the data: section is
 # parsed into FlareDataConfig, so the four keys above are recognized instead of rejected.
-load_flare_config = partial(load_config, data_cls=FlareDataConfig)
+solar_event_config = partial(load_config, data_cls=SolarDataConfig)
 
 
 __all__ = [
-    "FlareDataConfig",
-    "load_flare_config",
+    "SolarDataConfig",
+    "solar_event_config",
     # Re-exports so app code can import everything config-related from one place.
     "DataConfig",
     "OutputConfig",
