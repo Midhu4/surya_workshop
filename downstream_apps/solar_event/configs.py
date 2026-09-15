@@ -30,7 +30,7 @@ from workshop_infrastructure.configs import (  # re-exported for convenience
 
 @dataclass
 class SolarDataConfig(DataConfig):
-    """DataConfig plus the flare-catalog alignment settings used by ``FlareDSDataset``.
+    """DataConfig plus the flare-catalog alignment settings used by ``solar_Dataset``.
 
     These four keys are what makes this app's ``data:`` section different from any other
     downstream task's. Swap them for your own when you fork.

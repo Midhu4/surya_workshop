@@ -35,7 +35,7 @@ def destandardize_channels(batch: dict, channel_order: list, scalers: dict) -> d
     return {**batch, "ts": x}
 
 
-class RegressionFlareModel(nn.Module):
+class ClassificationModel(nn.Module):
     def __init__(self, input_dim: int):
         """
         Initializes the RegressionFlareModel.

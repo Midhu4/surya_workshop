@@ -24,7 +24,7 @@
 #   --deterministic warn   (reproducible run; see training.deterministic below)
 # =============================================================================
 
-job_id: solar_flare_forecasting
+job_id: solar_event_identification
 
 
 # -----------------------------------------------------------------------------
@@ -43,9 +43,9 @@ data:
   time_delta_target_minutes: 60   # Step size (minutes) between forecast frames
 
   # -- Downstream label alignment (flare catalog → Surya index) --
-  solar_event_path: ../data/solar_event_data.csv
+  solar_event_path: ../data/solar_event_data2.csv
   ds_time_column: Start_Date      # Column in the flare catalog used as the event timestamp
-  ds_time_tolerance: 4d           # Max allowed gap between catalog and Surya timestamps
+  ds_time_tolerance: 1d           # Max allowed gap between catalog and Surya timestamps
   ds_match_direction: forward     # "forward": use solar state *before* the flare (causal)
 
   # -- Local data (only needed when the index contains relative local paths) --
