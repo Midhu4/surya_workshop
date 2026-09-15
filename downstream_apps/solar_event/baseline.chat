@@ -1,0 +1,401 @@
+{
+  "messages": [
+    {
+      "time": 1789497466.6633701,
+      "metadata": {
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+        "model": {
+          "id": "sonnet",
+          "settings": {}
+        },
+        "settings": {}
+      },
+      "id": "6cc0f66c-54f0-4753-bebd-0439d9ccce54",
+      "type": "msg",
+      "raw_time": false,
+      "body": "surya_workshop/downstream_apps/solar_event/1_baseline_template.ipynb\n\nCan you check the code cell '''# Inspect a single batch to confirm shapes before training.\nbatch = next(iter(train_data_loader))\nprint({k: (tuple(v.shape) if hasattr(v, \"shape\") else type(v).__name__) for k, v in batch.items()})\n''' \n\nThis seems to crash the server. Why?",
+      "sender": "smildred"
+    },
+    {
+      "metadata": {
+        "tool_calls": [
+          {
+            "status": "completed",
+            "raw_output": "/home/jovyan/surya_workshop/downstream_apps/solar_event/.ipynb_checkpoints/0_dataset_dataloader_template-checkpoint.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/.ipynb_checkpoints/1_baseline_template-checkpoint.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/.ipynb_checkpoints/A_shapes_and_broadcasting-checkpoint.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/0_dataset_dataloader_template.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/1_baseline_template.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/2_finetune_template_1D.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/3_finetune_template_1D.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/ADAPTING.md\n/home/jovyan/surya_workshop/downstream_apps/solar_event/A_shapes_and_broadcasting.ipynb\n/home/jovyan/surya_workshop/downstream_apps/solar_event/__pycache__/configs.cpython-312.pyc\n/home/jovyan/surya_workshop/downstream_apps/solar_event/assets/.gitkeep\n/home/jovyan/surya_workshop/downstream_apps/solar_event/assets/scalers.yaml\n/home/jovyan/surya_workshop/downstream_apps/solar_event/baseline.chat\n/home/jovyan/surya_workshop/downstream_apps/solar_event/configs.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/configs/config_script.yaml\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/.ipynb_checkpoints/hek_flare_catalog-checkpoint.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/.ipynb_checkpoints/solar_event_data-checkpoint.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/.ipynb_checkpoints/solar_event_data2-checkpoint.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/hek_flare_catalog.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/solar_event_data.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/data/solar_event_data2.csv\n/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/__init__.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/__pycache__/__init__.cpython-312.pyc\n/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/__pycache__/solar_event_dataset.cpython-312.pyc\n/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/solar_event_dataset.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/download_scalers.sh\n/home/jovyan/surya_workshop/downstream_apps/solar_event/download_scalers_and_weights.sh\n/home/jovyan/surya_workshop/downstream_apps/solar_event/lightning_modules/__init__.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/lightning_modules/pl_simple_baseline.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260914T194729Z_000_data_train_5616.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T180343Z_000_data_train_658.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182532Z_000_data_train_1482.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182532Z_000_data_train_1499.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182532Z_000_data_train_1509.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182747Z_000_data_train_225.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182747Z_000_data_train_235.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T182747Z_000_data_train_245.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T183457Z_000_data_train_292.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T183457Z_000_data_train_302.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T183457Z_000_data_train_312.log\n/home/jovyan/surya_workshop/downstream_apps/solar_event/metrics/__init__.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/metrics/template_metrics.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/models/__init__.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/models/simple_baseline.py\n/home/jovyan/surya_workshop/downstream_apps/solar_event/understanding dataloaders.chat",
+            "kind": "execute",
+            "tool_call_id": "toolu_bdrk_017G2sCyp2nzURcMeS6LVoQD",
+            "raw_input": {
+              "description": "List files in solar_event downstream app",
+              "command": "find /home/jovyan/surya_workshop/downstream_apps/solar_event -maxdepth 3 -type f | sort"
+            },
+            "title": "find solar_event -maxdepth 3 -type f | sort"
+          },
+          {
+            "raw_input": {
+              "file_path": "/home/jovyan/surya_workshop/downstream_apps/solar_event/1_baseline_template.ipynb"
+            },
+            "locations": [
+              "/home/jovyan/surya_workshop/downstream_apps/solar_event/1_baseline_template.ipynb"
+            ],
+            "kind": "read",
+            "tool_call_id": "toolu_bdrk_01MPZC8i7JGDzQogzwR9Sm8X",
+            "title": "Read 1_baseline_template.ipynb",
+            "status": "completed",
+            "raw_output": [
+              {
+                "text": "<cell id=\"d651fb69\"><cell_type>markdown</cell_type># PyTorch Lightning baseline template\n\nby Andr\u00e9s Mu\u00f1oz-Jaramillo\n\nThis notebook is meant to act as a template to train and use a simple regression model to define a baseline that can be compared with a DS application.\n\nIt focuses on the concept of defining a PyTorch model, a PyTorch lightning training loop and the deffinition of metrics of performance.\n\nThis notebook assumes familiarity with the concepts of datasets and dataloaders contained in the **_0_dataset_dataloader_template.ipynb_**</cell id=\"d651fb69\">\n<cell id=\"f6bade9c\"><cell_type>markdown</cell_type>## Set your cuda visible device\n\n**IMPORTANT:** Since we are sharing resources, please make sure that the cuda visible device you put here is the one assigned to your team and your machine.   </cell id=\"f6bade9c\">\n<cell id=\"6d6af87a\">import os\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"</cell id=\"6d6af87a\">\n<cell id=\"4ed04321\"># Must be set BEFORE torch is imported: cuBLAS reads this once, when it initializes, so\n# setting it later has no effect. It is what lets training.deterministic work without a\n# cuBLAS warning on every run. (Restart the kernel if torch was already imported.)\nimport os\nos.environ.setdefault(\"CUBLAS_WORKSPACE_CONFIG\", \":4096:8\")\n\nimport sys\nfrom torch.utils.data import DataLoader\n\nimport torch\nimport yaml\n\nimport lightning as L\nfrom lightning.pytorch.callbacks import ModelCheckpoint\nfrom lightning.pytorch.loggers import CSVLogger, WandbLogger\n\n# Append base path.  May need to be modified if the folder structure changes.\n# It gives the notebook access to the wokshop_infrastructure folder.\nsys.path.append(\"../../\")\n \n# Append Surya path. May need to be modified if the folder structure changes.\n# It gives the notebook access to surya's release code.\n\nfrom workshop_infrastructure.utils import build_scalers  # Data scaling utilities for Surya stacks\n\ntorch.set_float32_matmul_precision('medium')\n\n</cell id=\"4ed04321\">\n<cell id=\"04135ff7\"><cell_type>markdown</cell_type>## Load configuration\n\nSurya was designed to read a configuration file that defines many aspects of the model\nincluding the data it uses we use this config file to set default values that do not\nneed to be modified, but also to define values specific to our downstream application</cell id=\"04135ff7\">\n<cell id=\"63c1fe60\"># The config is the single source of truth. load_flare_config() parses it into a typed\n# object, exactly as the training script 3_finetune_template_1D.py does, so the same YAML\n# behaves identically here and in production. Notebook 0 walks through what it contains.\nfrom downstream_apps.solar_event.configs import solar_event_config\n\ncfg = solar_event_config(\"./configs/config_script.yaml\")\nprint(f\"Loaded config for job: {cfg.job_id}\")\n</cell id=\"63c1fe60\">\n\nLoaded config for job: solar_event_identification\n\n<cell id=\"70dfbfb8\"><cell_type>markdown</cell_type>## Download assets\n\nThe config says where the assets belong, so it is loaded first. `ensure_assets()` fetches only what is missing from HuggingFace, so re-running this is free.\n</cell id=\"70dfbfb8\">\n<cell id=\"b23545ce\"># One implementation, shared by the notebooks, the training script and the\n# download_*.sh wrappers: workshop_infrastructure/assets.py.\n# The linear baseline needs no backbone, so skip the 1.8 GB weights.\nfrom workshop_infrastructure.assets import ensure_assets\n\nensure_assets(cfg, which=[\"scalers\"])\n\n# Now that scalers.yaml is guaranteed to be on disk, load it. build_scalers()\n# accepts the resolved path directly.\nscalers = build_scalers(info=cfg.data.scalers_path)\nprint(f\"Loaded scalers for {len(scalers)} channels.\")\n</cell id=\"b23545ce\">\n\nLoaded scalers for 13 channels.\n\n\n\n<cell id=\"af6574dc\"><cell_type>markdown</cell_type>## Define Downstream (DS) datasets\n\nThis child class takes as input all expected HelioFM parameters, plus additonal parameters relevant to the downstream application.  Here we focus in particular to the DS index and parameters necessary to combine it with the HelioFM index.\n\nAnother important component of creating a dataset class for your DS is normalization.  Here we use a log normalization on xray flux that will act as the output target.  Making log10(xray_flux) strictly positive and having 66% of its values between 0 and 1\n\nIn this case we will define both a training and a validation dataset using the indices pointed at in the config\n\n**_Important:  In this notebook we sets max_number_of_samples=6 to potentially avoid going through the whole dataset as we explore it.  Keep in mind this for the future in case the database seems smaller than you expect_**\n</cell id=\"af6574dc\">\n<cell id=\"34db2cc6\">from downstream_apps.solar_event.datasets.solar_event_dataset import solar_Dataset</cell id=\"34db2cc6\">\n<cell id=\"70e9c5b2\"># build_helio_dataloaders() constructs the train and validation datasets and wraps them\n# in DataLoaders. It fills in every generic argument (channels, temporal sampling, S3\n# access, worker settings) from the config \u2014 see notebook 0 for what that block looks\n# like written out. Only the flare-specific arguments are passed here, which is exactly\n# the list you replace when you fork the template.\n#\n# It also handles two details that are easy to get wrong by hand: the validation set gets\n# phase=\"val\" (no random channel masking or flips), and only the training loader shuffles.\nfrom workshop_infrastructure.datasets.builders import build_helio_dataloaders\n\ntrain_data_loader, val_data_loader = build_helio_dataloaders(\n    cfg,\n    solar_Dataset,\n    scalers=scalers,\n    num_workers=4,          # fewer workers than the script: notebooks start faster\n    #### Downstream (DS) specific parameters\n    return_surya_stack=True,\n    max_number_of_samples=6,\n    ds_flare_index_path=f\"data/{cfg.data.solar_event_path}\",\n    ds_time_column=cfg.data.ds_time_column,\n    ds_time_tolerance=cfg.data.ds_time_tolerance,\n    ds_match_direction=cfg.data.ds_match_direction,\n)\n\nbatch_size = cfg.batch_size\nprint(f\"train: {len(train_data_loader.dataset)} samples | \"\n      f\"val: {len(val_data_loader.dataset)} samples | batch_size: {batch_size}\")\n</cell id=\"70e9c5b2\">\n\ntrain: 6 samples | val: 6 samples | batch_size: 2\n\n<cell id=\"79fda7cf\"><cell_type>markdown</cell_type>Training and validation get separate datasets and dataloaders. They differ only in the index they read and in `phase`: `phase=\"val\"` turns off the random channel masking and vertical flips used for training augmentation.\n\nThe loaders use `multiprocessing_context=\"spawn\"` \u2014 the dataset holds an S3 client that does not survive `fork`, and spawn also avoids lockups in shared environments.\n</cell id=\"79fda7cf\">\n<cell id=\"48bb2912\">'''# Inspect a single batch to confirm shapes before training.\nbatch = next(iter(train_data_loader))\nprint({k: (tuple(v.shape) if hasattr(v, \"shape\") else type(v).__name__) for k, v in batch.items()})\n''' \n\n# This code seems to crash cpu server</cell id=\"48bb2912\">\n\n/home/jovyan/envs/surya_ws/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.\n  warnings.warn(warn_msg)\n\n<cell id=\"1d4d2dea\"><cell_type>markdown</cell_type>## Define simple baseline model\n\nDefining a simple baseline is important to understand what value is bringing the AI model to the problem.  \n\nIt is always very good to have a very simple baseline model.  Ideally one that cannot overfit the data.  This is a very good way of really measuring the value added of complex models.   Classical machine learning excels here:\n\n- Regressions and logistic regressions.\n- Climatological averages.\n- Persistance.\n- Simple transformations.\n\nSimple models avoid excesively optimistic assessments of the capatiblities of a complex models and for many problems are actually remarkably hard to beat.\n\nIn this example we define a simple regression acting on the intensity of each channel.  Note that we invert the normalization to deal with strictly positive quantities.  As with the dataset we will be importing the model from a module so that we can use it within training scripts later on.</cell id=\"1d4d2dea\">\n<cell id=\"3f5fd639\">from downstream_apps.template.models.simple_baseline import RegressionFlareModel</cell id=\"3f5fd639\">\n<cell id=\"18d87992\"><cell_type>markdown</cell_type>We can now test that this model manipulates a batch as expected and returns an estimate of flare intensity\n\nNote that the simple regression model definition requires knowing the number of channels and timesteps so here we pull that information from the configuration intializing the model.</cell id=\"18d87992\">\n<cell id=\"b0b6ce02\">n_input_timestamps = cfg.model.time_embedding.time_dim\nn_channels = len(cfg.data.channels)\n\n# RegressionFlareModel only needs the flattened input dimension.\n# It expects 'ts' in signum-log space \u2014 use destandardize_channels() before calling forward().\nmodel = RegressionFlareModel(n_input_timestamps * n_channels)\n</cell id=\"b0b6ce02\">\n<cell id=\"3fee1e68\"><cell_type>markdown</cell_type>Now we can pass the input stack 'ts' to the model to transform it into our regression output.   Note that since this model has not been trained and was initalized randomly.  The output here has no real meaning.  It only acts as a test that our model forward doesn't have dimension problems.\n\nDimension problemns are the dominant source of error in this kind of work.\n\nNote that our output has now the size of our batch.</cell id=\"3fee1e68\">\n<cell id=\"d7d97841\">from downstream_apps.template.models.simple_baseline import destandardize_channels\n\nbatch = next(iter(train_data_loader))\n\n# RegressionFlareModel works in signum-log space, not normalized space.\n# destandardize_channels undoes the per-channel z-score but KEEPS the log compression \u2014\n# raw DN values span too many orders of magnitude to be good features for one linear layer.\n# (For true physical units, use train_dataset.inverse_transform_data() instead. See the\n#  \"THE THREE SPACES\" block in workshop_infrastructure/datasets/helio.py.)\nbatch_logspace = destandardize_channels(batch, channel_order=cfg.data.channels, scalers=scalers)\noutput = model.forward(batch_logspace)[:, 0]  # Get rid of singleton dimension\noutput\n</cell id=\"d7d97841\">\n<cell id=\"36f32e64\"><cell_type>markdown</cell_type>## Define your metrics\n\nMetrics are a very important part of training AI models.   They provide your models with the quantitification of error, which in turn shifts the weights towards better pefrorming models.  They also provide a way for you to monitor performance, identify overfitting, and quantify value added. \n\nWe now initialize the metrics class which allows you to control what metrics do you want to use as \"loss\" (i.e. the metrics that backpropagate through your model) and which ones for monitoring performance.  As with other components, this takes the form of a loaded module that can be later use in a training script</cell id=\"36f32e64\">\n<cell id=\"34c502ec\">from downstream_apps.template.metrics.template_metrics import FlareMetrics</cell id=\"34c502ec\">\n<cell id=\"d152b127\">train_loss_metrics = FlareMetrics(\"train_loss\")\n# val_loss is the quantity logged as \"val_loss\" and used to pick the best checkpoint.\n# It defaults to the same MSE as train_loss \u2014 override FlareMetrics.val_loss to change it.\nval_loss_metrics = FlareMetrics(\"val_loss\")\ntrain_evaluation_metrics = FlareMetrics(\"train_metrics\")\n# Reported only: val_metrics do NOT influence checkpoint selection.\nvalidation_evaluation_metrics = FlareMetrics(\"val_metrics\")</cell id=\"d152b127\">\n<cell id=\"0550062c\"><cell_type>markdown</cell_type>Now they can be evaluated in our model's output and our ground truth.   First the loss that actually will backpropagate, in this case Mean Squared Errror</cell id=\"0550062c\">\n<cell id=\"2baf9d36\">train_loss_metrics(output, batch[\"forecast\"])</cell id=\"2baf9d36\">\n<cell id=\"3dc5eb6d\"><cell_type>markdown</cell_type>Then a training evaluation that will not backpropagate and inform our model, but that we can keep an eye on. Note that reporting lots of metrics during training will slow the training process.  I'm including it her as an example, but oftentimes is better to put the diagnostics only in the validation evaluation metrics.\n\nHere we are caclulating the Root Relative Squared Error https://lightning.ai/docs/torchmetrics/stable/regression/rse.html \n\nA value below one means the prediction is better than predicting the average.  It is unlikely that this metric will be lower than one with a randomly initialized model</cell id=\"3dc5eb6d\">\n<cell id=\"796559f1\">train_evaluation_metrics(output, batch[\"forecast\"])</cell id=\"796559f1\">\n<cell id=\"3d65e7cd\"><cell_type>markdown</cell_type>In the validation evaluation metrics we report both MSE and RRSE</cell id=\"3d65e7cd\">\n<cell id=\"0a0bbb35\">validation_evaluation_metrics(output, batch[\"forecast\"])</cell id=\"0a0bbb35\">\n<cell id=\"537871ed\"><cell_type>markdown</cell_type>## Define your PyTorch ligthning module\n\nIn this workshop we will use PyTorch lightning to train our models.  PyTorch lighting reduces the amount of code required to implement a training loop in comparison to PyTorch (at the expense of control and versatility).  \n\nOpening the FlareLightningModule shows a simple Lightning model implementation.  It consists of:\n\n- An initialization of the class (metrics, model, and learning rate).\n- The forward code that runs evaluation of the model.\n- Training and validation steps.\n- Configuration of optimizers.</cell id=\"537871ed\">\n<cell id=\"9d730cf3\">from downstream_apps.template.lightning_modules.pl_simple_baseline import FlareLightningModule</cell id=\"9d730cf3\">\n<cell id=\"3321963d\"><cell_type>markdown</cell_type>## Set your global seeds\n\nSince training AI models generally uses stochastic gradient descent, it is a good idea to fix your random seeds so that your training exercise is reproducible.    </cell id=\"3321963d\">\n<cell id=\"cc28903d\">L.seed_everything(42, workers=True)</cell id=\"cc28903d\">\n<cell id=\"119ec413\"><cell_type>markdown</cell_type>## Intialize Lightning module\n\nNow we properly initalize the Lightning module to enable training, including passing the dictionary of metrics</cell id=\"119ec413\">\n<cell id=\"553565e7\">from functools import partial\n\nmetrics = {\n    'train_loss': train_loss_metrics,\n    'val_loss': val_loss_metrics,\n    'train_metrics': train_evaluation_metrics,\n    'val_metrics': validation_evaluation_metrics,\n}\n\n# Wire up the inverse transform so FlareLightningModule applies it before every model call.\npreprocess_fn = partial(\n    destandardize_channels,\n    channel_order=cfg.data.channels,\n    scalers=scalers,\n)\n\nlit_model = FlareLightningModule(\n    model, metrics, lr=cfg.learning_rate, batch_size=batch_size, preprocess_fn=preprocess_fn\n)\n</cell id=\"553565e7\">\n<cell id=\"7b9c76c8\"><cell_type>markdown</cell_type>## Logging\n\nIn order to properly compare experiments against each other, it is very useful to log evaluation metrics in a place where they can be compared against other training runs.  In this workshop we will use Weights and Biases (WandB). \n\nThe first time you run WandB in a machine it will ask you to login to WandB.  You should have received an invitation to our project.  In order to login you must:\n\n- Select option 2 (existing account).   In VScode the dialog opens a box at the top of your screen.\n- Click on get API Key (this will open a browser).\n- Generate API Key.\n- Paste it in the dialog box at the top of your VSCode</cell id=\"7b9c76c8\">\n<cell id=\"48c4d138\">project_name = cfg.wandb_project\nrun_name = \"baseline_experiment_1\"  # give your run a descriptive name\n\nwandb_logger = WandbLogger(\n    entity=cfg.wandb_entity,  # set wandb_entity in the config; null = personal account\n    project=project_name,\n    name=run_name,\n    log_model=False,\n    save_dir=\"./wandb/wandb_tmp\",\n)\n\ncsv_logger = CSVLogger(\"runs\", name=project_name)\n</cell id=\"48c4d138\">\n<cell id=\"7e24e547\"><cell_type>markdown</cell_type>## Initialize trainer\n\nWith the loggers done, now the trainer needs to be defined.  The trainer defines several properties of your training run. Here we define:\n\n- The max number of epochs (one epoch represents your model seeing your entire training dataset).\n- Define where the training run will take place (auto uses the GPU if possible, if not, CPU).\n- The loggers.\n- The callbacks (here we save the model with the lowest validation loss).\n- Logging frequency (because we are working with a small dataset it needs to be small).</cell id=\"7e24e547\">\n<cell id=\"b008c604\">max_epochs = 2\n\n# -------------------------------------------------------------------------\n# Trainer\n# -------------------------------------------------------------------------\ntrainer = L.Trainer(\n    max_epochs=max_epochs,\n    accelerator=\"auto\",\n    devices=\"auto\",\n    logger=[wandb_logger, csv_logger],\n    callbacks=[\n        ModelCheckpoint(\n            monitor=\"val_loss\",\n            mode=\"min\",\n            save_top_k=1,\n        )\n    ],\n    log_every_n_steps=2,\n)</cell id=\"b008c604\">\n<cell id=\"1088d108\"><cell_type>markdown</cell_type>## Fit the model\n\nFinally we fit the model.  We pass the Lighting module, and our dataloaders. (This cell requires the use of GPU, every other cell can be run on CPU.)</cell id=\"1088d108\">\n<cell id=\"f8a6e448\">trainer.fit(lit_model, train_data_loader, val_data_loader)</cell id=\"f8a6e448\">\n<cell id=\"ebcc1a23\"><cell_type>markdown</cell_type>## Conclusion\n\nWith this we have now integrated our dataset, dataloaders, metrics, and baseline into an end-2-end training loop.  The next step is to substitute the simple model with Surya.</cell id=\"ebcc1a23\">",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "raw_input": {
+              "file_path": "/home/jovyan/surya_workshop/workshop_infrastructure/datasets/builders.py"
+            },
+            "permission_options": [
+              {
+                "name": "Yes",
+                "option_id": "allow-once",
+                "kind": "allow_once"
+              },
+              {
+                "option_id": "allow-with-updates",
+                "name": "Yes, allow reading from datasets/ during this session",
+                "kind": "allow_always"
+              },
+              {
+                "option_id": "reject",
+                "name": "No",
+                "kind": "reject_once"
+              }
+            ],
+            "tool_call_id": "toolu_bdrk_013xcpjAHoiq8GV6zn6rhhjE",
+            "kind": "read",
+            "status": "completed",
+            "locations": [
+              "/home/jovyan/surya_workshop/workshop_infrastructure/datasets/builders.py"
+            ],
+            "permission_status": "resolved",
+            "title": "Read builders.py",
+            "selected_option_id": "allow-once",
+            "session_id": "66397102-bff9-4b08-8066-fcf62070788a",
+            "raw_output": "1\t\"\"\"\n2\tDataset and DataLoader construction shared by every Surya downstream app.\n3\t\n4\t``HelioNetCDFDataset`` takes ~20 constructor arguments, all of which come straight from\n5\tthe ``data:`` and ``training:`` sections of the config. Spelling that block out at every\n6\tentry point means the same 20 lines get copied into every notebook and every training\n7\tscript, and they drift: one copy forgets ``phase=\"val\"``, another hardcodes a flag the\n8\tYAML was supposed to control.\n9\t\n10\tThese builders own that block once. A downstream app supplies its dataset subclass and\n11\twhatever task-specific keyword arguments that subclass adds::\n12\t\n13\t    train_loader, val_loader = build_helio_dataloaders(\n14\t        cfg,\n15\t        FlareDSDataset,\n16\t        ds_flare_index_path=cfg.data.flare_index_path,\n17\t        label_transform=my_label_transform,\n18\t    )\n19\t\"\"\"\n20\t\n21\tfrom __future__ import annotations\n22\t\n23\timport random\n24\tfrom functools import partial\n25\tfrom typing import Any, Tuple, Type\n26\t\n27\timport numpy as np\n28\timport torch\n29\tfrom torch.utils.data import DataLoader, Dataset\n30\t\n31\tfrom workshop_infrastructure.utils import build_scalers\n32\t\n33\t\n34\tdef _seed_worker(worker_id: int, base_seed: int) -> None:\n35\t    \"\"\"Seed every RNG a DataLoader worker might draw from.\n36\t\n37\t    Seeding torch alone is not enough: ``RandomChannelMaskerTransform`` in\n38\t    ``workshop_infrastructure/datasets/helio.py`` draws from Python's ``random``\n39\t    (``random.sample`` / ``random.random``), and downstream datasets commonly use NumPy.\n40\t\n41\t    Supplying this deliberately displaces Lightning's auto-injected\n42\t    ``pl_worker_init_function``, which derives worker seeds from ``torch.initial_seed()``\n43\t    \u2014 i.e. from the ambient global RNG state, which is exactly the coupling we are\n44\t    removing here.\n45\t    \"\"\"\n46\t    seed = (base_seed + worker_id) % (2 ** 32)\n47\t    random.seed(seed)\n48\t    np.random.seed(seed)\n49\t    torch.manual_seed(seed)\n50\t\n51\t\n52\tdef _base_dataset_kwargs(cfg, scalers) -> dict:\n53\t    \"\"\"Map a TrainingConfig onto the HelioNetCDFDataset constructor arguments.\n54\t\n55\t    This is the single place where config field names meet dataset parameter names.\n56\t    \"\"\"\n57\t    return dict(\n58\t        # Temporal sampling\n59\t        time_delta_input_minutes=cfg.data.time_delta_input_minutes,\n60\t        time_delta_target_minutes=cfg.data.time_delta_target_minutes,\n61\t        n_input_timestamps=cfg.model.time_embedding.time_dim,\n62\t        rollout_steps=cfg.rollout_steps,\n63\t        # Channels and normalization\n64\t        channels=cfg.data.channels,\n65\t        scalers=scalers,\n66\t        # Augmentation\n67\t        drop_hmi_probability=cfg.drop_hmi_probability,\n68\t        use_latitude_in_learned_flow=cfg.use_latitude_in_learned_flow,\n69\t        # Storage: local root, and how s3:// paths in the index are read\n70\t        sdo_data_root_path=cfg.data.sdo_data_root_path,\n71\t        s3_mode=cfg.data.s3_mode,\n72\t        s3_storage_options={\"anon\": cfg.data.s3_anon},\n73\t        s3_cache_dir=cfg.data.s3_cache_dir,\n74\t        s3_boto3_max_concurrency=cfg.data.s3_boto3_max_concurrency,\n75\t        s3_boto3_part_size_mb=cfg.data.s3_boto3_part_size_mb,\n76\t    )\n77\t\n78\t\n79\tdef build_helio_datasets(\n80\t    cfg,\n81\t    dataset_cls: Type[Dataset],\n82\t    scalers: Any = None,\n83\t    **task_kwargs,\n84\t) -> Tuple[Dataset, Dataset]:\n85\t    \"\"\"Build the train and validation datasets described by ``cfg``.\n86\t\n87\t    Args:\n88\t        cfg: A ``TrainingConfig`` from ``load_config()``.\n89\t        dataset_cls: ``HelioNetCDFDataset`` or a subclass of it.\n90\t        scalers: Normalization statistics. Built from ``cfg.data.scalers_path`` if omitted;\n91\t            pass an existing dict to avoid re-reading the YAML.\n92\t        **task_kwargs: Extra keyword arguments forwarded to ``dataset_cls`` \u2014 the\n93\t            task-specific parameters your subclass adds.\n94\t\n95\t    Returns:\n96\t        ``(train_dataset, val_dataset)``. They differ only in the index they read and in\n97\t        ``phase``: the validation set uses ``phase=\"val\"``, which disables the random\n98\t        channel masking and vertical flips that are applied during training.\n99\t    \"\"\"\n100\t    if scalers is None:\n101\t        scalers = build_scalers(info=cfg.data.scalers_path)\n102\t\n103\t    common = {**_base_dataset_kwargs(cfg, scalers), **task_kwargs}\n104\t\n105\t    train_dataset = dataset_cls(index_path=cfg.data.train_data_path, phase=\"train\", **common)\n106\t    val_dataset = dataset_cls(index_path=cfg.data.valid_data_path, phase=\"val\", **common)\n107\t    return train_dataset, val_dataset\n108\t\n109\t\n110\tdef build_helio_dataloaders(\n111\t    cfg,\n112\t    dataset_cls: Type[Dataset],\n113\t    scalers: Any = None,\n114\t    num_workers: int | None = None,\n115\t    seed: int | None = None,\n116\t    **task_kwargs,\n117\t) -> Tuple[DataLoader, DataLoader]:\n118\t    \"\"\"Build the train and validation DataLoaders described by ``cfg``.\n119\t\n120\t    Args:\n121\t        cfg: A ``TrainingConfig`` from ``load_config()``.\n122\t        dataset_cls: ``HelioNetCDFDataset`` or a subclass of it.\n123\t        scalers: Normalization statistics; built from the config if omitted.\n124\t        num_workers: Override for ``cfg.num_workers`` (useful in notebooks, where fewer\n125\t            workers start faster).\n126\t        seed: Seed for the shuffle order and the per-worker RNGs. Defaults to ``cfg.seed``.\n127\t            Pinning it explicitly is what makes the epoch order depend only on the config:\n128\t            a bare ``shuffle=True`` seeds its sampler from whatever the global torch RNG\n129\t            state happens to be when the iterator is created, so anything that consumes\n130\t            RNG earlier in the program silently reshuffles the data.\n131\t        **task_kwargs: Extra keyword arguments forwarded to ``dataset_cls``.\n132\t\n133\t    Returns:\n134\t        ``(train_loader, val_loader)``. Only the training loader shuffles.\n135\t    \"\"\"\n136\t    train_dataset, val_dataset = build_helio_datasets(\n137\t        cfg, dataset_cls, scalers=scalers, **task_kwargs\n138\t    )\n139\t\n140\t    workers = cfg.num_workers if num_workers is None else num_workers\n141\t    base_seed = cfg.seed if seed is None else seed\n142\t\n143\t    loader_kwargs = dict(\n144\t        batch_size=cfg.batch_size,\n145\t        num_workers=workers,\n146\t        pin_memory=True,\n147\t        drop_last=True,\n148\t    )\n149\t    if workers > 0:\n150\t        # \"spawn\": the dataset holds an s3fs/boto3 handle that does not survive fork.\n151\t        # Both of these are rejected outright when num_workers == 0.\n152\t        loader_kwargs[\"multiprocessing_context\"] = \"spawn\"\n153\t        loader_kwargs[\"persistent_workers\"] = True\n154\t        loader_kwargs[\"worker_init_fn\"] = partial(_seed_worker, base_seed=base_seed)\n155\t\n156\t    # An explicit generator makes the shuffle a function of the seed alone, rather than\n157\t    # of the global RNG state at the moment the iterator happens to be created.\n158\t    shuffle_generator = torch.Generator()\n159\t    shuffle_generator.manual_seed(base_seed)\n160\t\n161\t    train_loader = DataLoader(\n162\t        train_dataset, shuffle=True, generator=shuffle_generator, **loader_kwargs\n163\t    )\n164\t    # No generator for validation: it is not shuffled, so there is nothing to seed.\n165\t    val_loader = DataLoader(val_dataset, shuffle=False, **loader_kwargs)\n166\t    return train_loader, val_loader\n167\t"
+          },
+          {
+            "tool_call_id": "toolu_bdrk_01SfVbYmudbNM2zmUQppmYH2",
+            "raw_output": "1\t# =============================================================================\n2\t# Surya workshop \u2014 template fine-tuning config\n3\t#\n4\t# Five sections own all parameters:\n5\t#   data      \u2014 what to load and how to align labels\n6\t#   model     \u2014 backbone architecture, fine-tuning head, LoRA\n7\t#   training  \u2014 optimization and augmentation hyperparameters\n8\t#   output    \u2014 where to save checkpoints (and optional S3 upload)\n9\t#   logging   \u2014 experiment tracking (WandB)\n10\t#\n11\t# Two things to know before editing:\n12\t#\n13\t#   * Paths are relative to THIS FILE's directory (~ and $ENV_VARS are expanded), so a\n14\t#     fork works on any machine with no absolute paths to fix up. The one exception is\n15\t#     s3_cache_dir \u2014 see its comment below.\n16\t#   * Unrecognized keys are an ERROR, not a silent no-op. To add a task-specific key,\n17\t#     add the field to your DataConfig subclass in configs.py first.\n18\t#\n19\t# Usage \u2014 --config defaults to this file, so the short form is enough:\n20\t#   CUDA_VISIBLE_DEVICES=0,1 python -m downstream_apps.template.3_finetune_template_1D\n21\t#\n22\t# Per-run overrides that do not require editing this file:\n23\t#   --max-epochs 5     --batch-size 4     --s3-cache-dir /scratch/$USER/cache\n24\t#   --deterministic warn   (reproducible run; see training.deterministic below)\n25\t# =============================================================================\n26\t\n27\tjob_id: solar_event_identification\n28\t\n29\t\n30\t# -----------------------------------------------------------------------------\n31\t# Data\n32\t# -----------------------------------------------------------------------------\n33\tdata:\n34\t  # -- Paths (relative to this file's directory) --\n35\t  train_data_path: ../../../data/indices/surya_aws_s3_train.csv\n36\t  valid_data_path: ../../../data/indices/surya_aws_s3_val.csv\n37\t  scalers_path: ../assets/scalers.yaml\n38\t\n39\t  # -- Input channels and temporal sampling --\n40\t  channels: [aia94, aia131, aia171, aia193, aia211, aia304, aia335, aia1600,\n41\t             hmi_m, hmi_bx, hmi_by, hmi_bz, hmi_v]\n42\t  time_delta_input_minutes: [0]   # Offsets (minutes) of input frames relative to reference timestep\n43\t  time_delta_target_minutes: 60   # Step size (minutes) between forecast frames\n44\t\n45\t  # -- Downstream label alignment (flare catalog \u2192 Surya index) --\n46\t  solar_event_path: ../data/solar_event_data2.csv\n47\t  ds_time_column: Start_Date      # Column in the flare catalog used as the event timestamp\n48\t  ds_time_tolerance: 1d           # Max allowed gap between catalog and Surya timestamps\n49\t  ds_match_direction: forward     # \"forward\": use solar state *before* the flare (causal)\n50\t\n51\t  # -- Local data (only needed when the index contains relative local paths) --\n52\t  # sdo_data_root_path: /path/to/sdo   # Prepended to relative local paths; ignored for s3://\n53\t\n54\t  # -- S3 (only needed when index contains s3:// paths) --\n55\t  s3_anon: true                   # true for public buckets; false to use IAM credentials\n56\t\n57\t  # How S3 objects are read. Measured on one 13-channel SDO sample from\n58\t  # s3://nasa-surya-bench (times are indicative, not a benchmark):\n59\t  #\n60\t  #   download    \u2014 fetch the whole file into s3_cache_dir, then open locally.\n61\t  #                 ~9 s from a warm cache. Recommended, and the default.\n62\t  #   simplecache \u2014 fsspec read-through cache into s3_cache_dir. ~29 s on a cold fetch.\n63\t  #   stream      \u2014 read directly from S3, nothing written to disk, no cache dir needed.\n64\t  #                 ~271 s \u2014 roughly 9x slower than just fetching the whole file, because\n65\t  #                 HDF5 random access becomes many small ranged GETs. Use only when you\n66\t  #                 cannot spare the disk.\n67\t  s3_mode: download\n68\t\n69\t  # Local cache directory. REQUIRED unless s3_mode is \"stream\" \u2014 budget ~1 GB per unique\n70\t  # timestep, so the right location depends on your machine's scratch space.\n71\t  #\n72\t  # Left null here on purpose: this file is checked in and shared, and an absolute path\n73\t  # into one person's home is wrong for everyone else. Set it one of three ways\n74\t  # (highest precedence first):\n75\t  #\n76\t  #   1. --s3-cache-dir /scratch/$USER/helio_cache   (per-run)\n77\t  #   2. s3_cache_dir: /scratch/me/helio_cache       (here, in your own fork)\n78\t  #   3. export SURYA_WS_CACHE_DIR=/scratch/me/helio_cache   (per-machine, config stays clean)\n79\t  #\n80\t  # If none is set and the index contains s3:// paths, the run fails immediately with a\n81\t  # suggested path \u2014 not part-way through the first epoch. ~ and $ENV_VARS are expanded.\n82\t  s3_cache_dir: /home/jovyan/scratch_space/midhun/surya_cache\n83\t\n84\t  # -- S3 transfer tuning --\n85\t  # These control boto3's multipart download: how many threads download parts in\n86\t  # parallel and how large each part is.  The right values depend on your network\n87\t  # connection and where you are running (local machine vs. AWS EC2).\n88\t  #\n89\t  # To find the optimal values for your setup, run the benchmark script once\n90\t  # against a representative SDO NetCDF file and copy the recommended settings here:\n91\t  #\n92\t  #   python -m workshop_infrastructure.benchmark_s3 s3://nasa-surya-bench/2011/01/20110131_0000.nc --anon --quick\n93\t  #\n94\t  # The script downloads sample data with several (concurrency, part_size) combinations\n95\t  # and prints a throughput table.  A --quick run takes roughly 2-3 minutes;\n96\t  # drop --quick for a broader 25-cell grid.\n97\t  s3_boto3_max_concurrency: 4     # parallel download threads (benchmark default: 4)\n98\t  s3_boto3_part_size_mb: 64       # part size in MB (benchmark default: 64)\n99\t\n100\t  # -- Development --\n101\t  max_samples: 10                 # Cap dataset size for quick experiments (null = all samples)\n102\t\n103\t\n104\t# -----------------------------------------------------------------------------\n105\t# Model\n106\t# -----------------------------------------------------------------------------\n107\tmodel:\n108\t  # -- Pretrained checkpoint (relative to this file; downloaded on first run if missing) --\n109\t  pretrained_path: ../assets/surya.366m.v1.pt\n110\t\n111\t  # -- Backbone (Surya 366M defaults \u2014 match the pretrained checkpoint) --\n112\t  img_size: 4096\n113\t  patch_size: 16\n114\t  in_channels: 13\n115\t  embed_dim: 1280\n116\t  depth: 10\n117\t  spectral_blocks: 2\n118\t  num_heads: 16\n119\t  mlp_ratio: 4.0\n120\t  drop_rate: 0.0\n121\t  window_size: 2\n122\t  dp_rank: 4\n123\t  rpe: false\n124\t  learned_flow: false\n125\t  init_weights: false\n126\t  checkpoint_layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n127\t  ensemble: null\n128\t  nglo: 1\n129\t  time_embedding:\n130\t    type: linear        # Options: linear | fourier | perceiver\n131\t    n_queries: null     # Required for perceiver; unused otherwise\n132\t    time_dim: 1         # Number of input timesteps (must match time_delta_input_minutes length)\n133\t\n134\t  # -- Fine-tuning head --\n135\t  pooling: class_token  # Options: class_token | global_average | global_max | attention | transformer\n136\t  penultimate_linear_layer: true\n137\t  dropout: 0.2\n138\t  freeze_backbone: false\n139\t\n140\t  # -- LoRA adapters --\n141\t  use_lora: true\n142\t  lora_config:\n143\t    r: 8\n144\t    lora_alpha: 8\n145\t    lora_dropout: 0.1\n146\t    bias: none\n147\t    target_modules: [q_proj, v_proj, k_proj, out_proj, fc1, fc2]\n148\t\n149\t\n150\t# -----------------------------------------------------------------------------\n151\t# Training\n152\t# -----------------------------------------------------------------------------\n153\ttraining:\n154\t  learning_rate: 0.0001\n155\t  batch_size: 2         # Per-device batch size under DDP\n156\t  max_epochs: 20        # Can be overridden with --max-epochs at the CLI\n157\t  num_workers: 8        # DataLoader worker processes per device (use 0 to debug in-process)\n158\t\n159\t  # -- Reproducibility --\n160\t  # Seeds Python, NumPy, torch, every DataLoader worker, and the shuffle order. Two runs\n161\t  # of this file give the same numbers; change the seed to get a genuinely different run\n162\t  # rather than incidental variation.\n163\t  seed: 42\n164\t\n165\t  # How hard to insist on determinism. Passed straight to lightning.Trainer.\n166\t  #   false  \u2014 no guarantees; two identical runs may differ. The default, chosen for\n167\t  #            throughput. Measured on this template (1 epoch, max_samples: 10, one A100,\n168\t  #            LoRA): 159 s with false vs 190 s with warn, about +20% of total wall time.\n169\t  #            That total includes a fixed ~1.8 GB checkpoint load, so the overhead on the\n170\t  #            compute itself is proportionally larger \u2014 budget more on long runs.\n171\t  #   warn   \u2014 bit-identical wherever a deterministic CUDA kernel exists (which is the\n172\t  #            whole model as shipped), and a warning naming the op where one does not.\n173\t  #            Never blocks a run.\n174\t  #   true   \u2014 hard guarantee: an op with no deterministic kernel raises instead.\n175\t  #            NOTE: incompatible with model.learned_flow: true, which uses F.grid_sample\n176\t  #            (no deterministic CUDA backward) \u2014 that combination will fail.\n177\t  #\n178\t  # >> Set this to \"warn\" whenever you need to tell whether a change in your results came\n179\t  # >> from your edit or from run-to-run drift. With false, that comparison is not\n180\t  # >> meaningful: this config gave 0.060782 and 0.051657 on two identical runs.\n181\t  # >> For a one-off check you can leave this file alone and pass --deterministic warn.\n182\t  deterministic: false\n183\t\n184\t  # Caveat worth stating plainly: this buys you REPRODUCIBILITY, not statistical\n185\t  # significance. With max_samples: 10 and one epoch the number is still noise \u2014 it is\n186\t  # just the *same* noise every time, so a change in it can be attributed to your edit.\n187\t\n188\t  # Task-specific\n189\t  rollout_steps: 0\n190\t  drop_hmi_probability: 0.0\n191\t  use_latitude_in_learned_flow: false\n192\t  dtype: float32        # Options: float32 | bfloat16\n193\t\n194\t\n195\t# -----------------------------------------------------------------------------\n196\t# Output\n197\t# -----------------------------------------------------------------------------\n198\toutput:\n199\t  ckpt_dir: checkpoints   # Local directory for saved checkpoints\n200\t\n201\t  # S3 upload of best checkpoint (set s3_bucket to enable; all three are used together)\n202\t  s3_bucket: null         # e.g. my-ml-artifacts\n203\t  s3_prefix: \"\"           # Key prefix (folder) within the bucket, e.g. flare/exp_001\n204\t  s3_best_key: best.ckpt  # Stable object name; always points to the latest best checkpoint\n205\t\n206\t\n207\t# -----------------------------------------------------------------------------\n208\t# Logging\n209\t# -----------------------------------------------------------------------------\n210\tlogging:\n211\t  wandb_project: template_flare_regression\n212\t  wandb_entity: null      # WandB team/org name; null to log to your personal account\n213\t",
+            "locations": [
+              "/home/jovyan/surya_workshop/downstream_apps/solar_event/configs/config_script.yaml"
+            ],
+            "kind": "read",
+            "raw_input": {
+              "file_path": "/home/jovyan/surya_workshop/downstream_apps/solar_event/configs/config_script.yaml"
+            },
+            "title": "Read configs/config_script.yaml",
+            "status": "completed"
+          },
+          {
+            "locations": [
+              "/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/solar_event_dataset.py"
+            ],
+            "raw_input": {
+              "file_path": "/home/jovyan/surya_workshop/downstream_apps/solar_event/datasets/solar_event_dataset.py"
+            },
+            "kind": "read",
+            "tool_call_id": "toolu_bdrk_01W5CmerUAursgwHtTTNCtm4",
+            "status": "completed",
+            "title": "Read datasets/solar_event_dataset.py",
+            "raw_output": "1\timport numpy as np\n2\timport pandas as pd\n3\tfrom typing import Callable, Literal\n4\tfrom workshop_infrastructure.datasets.helio import HelioNetCDFDataset\n5\t\n6\t\n7\tclass solar_Dataset(HelioNetCDFDataset):\n8\t    \"\"\"\n9\t    Template child class of HelioNetCDFDataset showing how to build a downstream dataset.\n10\t    Extends the base class with a flare intensity label aligned to the Surya index.\n11\t\n12\t    All ``HelioNetCDFDataset`` keyword arguments (``index_path``, ``scalers``, ``channels``,\n13\t    ``s3_cache_dir``, etc.) are accepted via ``**kwargs`` and forwarded to the base class.\n14\t    ``load_forecast_frames`` defaults to ``False`` here (flare forecasting supplies its own\n15\t    labels, so future Surya frames are never fetched); pass it explicitly to override.\n16\t\n17\t    Additional Args:\n18\t        return_surya_stack: If True (default), include the Surya image stack in the returned dict.\n19\t            Set to False to return only the flare intensity label (useful for label inspection).\n20\t        max_number_of_samples: Cap the dataset length at this value. Useful for quick experiments.\n21\t        ds_solar_event_path: Path to the downstream flare intensity CSV index.\n22\t        ds_time_column: Column name in the flare index to use as the event timestamp.\n23\t        ds_time_tolerance: Maximum allowed time offset when matching Surya and DS indices\n24\t            (e.g., ``\"15min\"``). Unmatched entries are dropped.\n25\t        ds_match_direction: Merge direction passed to ``pd.merge_asof``. Use ``\"forward\"``\n26\t            for causal prediction (predict flares from prior solar state).\n27\t\n28\t    Raises:\n29\t        ValueError: If ``ds_flare_index_path`` is not provided, or if no overlap exists\n30\t            between the Surya and DS indices within the specified tolerance.\n31\t    \"\"\"\n32\t\n33\t    def __init__(\n34\t        self,\n35\t        # Downstream-specific parameters\n36\t        return_surya_stack: bool = True,\n37\t        max_number_of_samples: int | None = None,\n38\t        ds_flare_index_path: str | None = None,\n39\t        ds_time_column: str | None = None,\n40\t        ds_time_tolerance: str | None = None,\n41\t        ds_match_direction: Literal[\"forward\", \"backward\", \"nearest\"] = \"forward\",\n42\t        # All HelioNetCDFDataset parameters (index_path, scalers, channels, s3_*, etc.)\n43\t        **kwargs,\n44\t    ):\n45\t        if ds_match_direction not in [\"forward\", \"backward\", \"nearest\"]:\n46\t            raise ValueError(\"ds_match_direction must be one of 'forward', 'backward', or 'nearest'\")\n47\t\n48\t        # load_forecast_frames defaults to False here: flare forecasting supplies its\n49\t        # own labels, so future Surya frames never need to be fetched from disk/S3.\n50\t        kwargs.setdefault(\"load_forecast_frames\", False)\n51\t        super().__init__(**kwargs)\n52\t\n53\t        self.return_surya_stack = return_surya_stack\n54\t\n55\t        # Load ds index and find intersection with Surya index\n56\t        if ds_flare_index_path is not None:\n57\t            self.ds_index = pd.read_csv(ds_flare_index_path)\n58\t        else:\n59\t            raise ValueError(\"ds_flare_index_path must be provided for solar_Dataset\")\n60\t\n61\t        self.ds_index[\"ds_index\"] = pd.to_datetime(\n62\t            self.ds_index[ds_time_column]\n63\t        ).values.astype(\"datetime64[ns]\")\n64\t        self.ds_index.sort_values(\"ds_index\", inplace=True)\n65\t\n66\t        # Create Surya valid indices and find closest match to DS index\n67\t        self.df_valid_indices = pd.DataFrame(\n68\t            {\"valid_indices\": self.valid_indices}\n69\t        ).sort_values(\"valid_indices\")\n70\t        self.df_valid_indices = pd.merge_asof(\n71\t            self.df_valid_indices,\n72\t            self.ds_index,\n73\t            right_on=\"ds_index\",\n74\t            left_on=\"valid_indices\",\n75\t            direction=ds_match_direction,\n76\t        )\n77\t        # Remove duplicates keeping closest match\n78\t        self.df_valid_indices[\"index_delta\"] = np.abs(\n79\t            self.df_valid_indices[\"valid_indices\"] - self.df_valid_indices[\"ds_index\"]\n80\t        )\n81\t        self.df_valid_indices = self.df_valid_indices.sort_values(\n82\t            [\"ds_index\", \"index_delta\"]\n83\t        )\n84\t        self.df_valid_indices.drop_duplicates(\n85\t            subset=\"ds_index\", keep=\"first\", inplace=True\n86\t        )\n87\t        # Enforce a maximum time tolerance for matches\n88\t        if ds_time_tolerance is not None:\n89\t            self.df_valid_indices = self.df_valid_indices.loc[\n90\t                self.df_valid_indices[\"index_delta\"] <= pd.Timedelta(ds_time_tolerance),\n91\t                :,\n92\t            ]\n93\t            if len(self.df_valid_indices) == 0:\n94\t                raise ValueError(\"No intersection between Surya and DS indices\")\n95\t\n96\t        # Override valid indices variables to reflect matches between Surya and DS\n97\t        self.valid_indices = [\n98\t            pd.Timestamp(date) for date in self.df_valid_indices[\"valid_indices\"]\n99\t        ]\n100\t        self.adjusted_length = len(self.valid_indices)\n101\t        self.df_valid_indices.set_index(\"valid_indices\", inplace=True)\n102\t\n103\t        if max_number_of_samples is not None and max_number_of_samples < self.adjusted_length:\n104\t            self.valid_indices = self.valid_indices[:max_number_of_samples]\n105\t            self.df_valid_indices = self.df_valid_indices.iloc[:max_number_of_samples]\n106\t            self.adjusted_length = max_number_of_samples\n107\t\n108\t    def __len__(self):\n109\t        return self.adjusted_length\n110\t\n111\t    def __getitem__(self, idx: int) -> dict:\n112\t        \"\"\"\n113\t        Args:\n114\t            idx: Dataset index.\n115\t\n116\t        Returns:\n117\t            Dictionary containing:\n118\t                forecast (np.float32): Normalized log10 flare intensity label.\n119\t                ds_index (str): ISO-format timestamp from the flare index.\n120\t            When ``return_surya_stack=True``, also includes all keys from\n121\t            ``HelioNetCDFDataset.__getitem__`` (ts, time_delta_input, lead_time_delta, etc.).\n122\t        \"\"\"\n123\t        sample = super().__getitem__(idx=idx) if self.return_surya_stack else {}\n124\t        sample[\"forecast\"] = self.df_valid_indices.iloc[idx][\"Solar_Event_Occurrence\"].astype(np.float32)\n125\t        sample[\"ds_index\"] = self.df_valid_indices[\"ds_index\"].iloc[idx].isoformat()\n126\t        return sample\n127\t"
+          },
+          {
+            "title": "tail -n 100 \"/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T183457Z_000_data_train_292.log\" 2>&1 echo \"---FILES---\" ls -la ",
+            "kind": "execute",
+            "raw_input": {
+              "command": "tail -n 100 \"/home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/20260915T183457Z_000_data_train_292.log\" 2>&1\necho \"---FILES---\"\nls -la /home/jovyan/surya_workshop/downstream_apps/solar_event/logs/data/",
+              "description": "Inspect most recent data-loading log for crash details"
+            },
+            "status": "completed",
+            "raw_output": "[2026-09-15 18:34:57 20260915T183457Z_000_data_train_292]: INFO Retrieving index 4.\n[2026-09-15 18:34:57 20260915T183457Z_000_data_train_292]: INFO Reading file s3://nasa-surya-bench/2010/05/20100518_0000.nc.\n---FILES---\ntotal 52\ndrwxrwsr-x. 2 jovyan users 4096 Sep 15 18:34 .\ndrwxrwsr-x. 3 jovyan users 4096 Sep 14 19:47 ..\n-rw-rw-r--. 1 jovyan users  633 Sep 14 19:48 20260914T194729Z_000_data_train_5616.log\n-rw-rw-r--. 1 jovyan users  627 Sep 15 18:04 20260915T180343Z_000_data_train_658.log\n-rw-rw-r--. 1 jovyan users  211 Sep 15 18:25 20260915T182532Z_000_data_train_1482.log\n-rw-rw-r--. 1 jovyan users  422 Sep 15 18:25 20260915T182532Z_000_data_train_1499.log\n-rw-rw-r--. 1 jovyan users  211 Sep 15 18:25 20260915T182532Z_000_data_train_1509.log\n-rw-rw-r--. 1 jovyan users  209 Sep 15 18:27 20260915T182747Z_000_data_train_225.log\n-rw-rw-r--. 1 jovyan users  209 Sep 15 18:27 20260915T182747Z_000_data_train_235.log\n-rw-rw-r--. 1 jovyan users  209 Sep 15 18:27 20260915T182747Z_000_data_train_245.log\n-rw-r--r--. 1 jovyan users  209 Sep 15 18:34 20260915T183457Z_000_data_train_292.log\n-rw-r--r--. 1 jovyan users  209 Sep 15 18:34 20260915T183457Z_000_data_train_302.log\n-rw-r--r--. 1 jovyan users  209 Sep 15 18:34 20260915T183457Z_000_data_train_312.log",
+            "tool_call_id": "toolu_bdrk_013yCo4Z5DRkn7nGw4fs59eE"
+          },
+          {
+            "tool_call_id": "toolu_bdrk_01DYiWRFi6j7gztQHxAsHrxp",
+            "title": "free -h echo \"---cache dir---\" ls -la surya_cache 2>&1 | head -30 echo \"---dmesg oom check---\" dmesg 2>&1 | grep -i -E \"oom|killed process\" | tail -20 echo \"---journalctl---\" journalctl -k --since \"-2 hours\" 2>&1 | grep -i oom | tail -20",
+            "status": "completed",
+            "raw_input": {
+              "command": "free -h\necho \"---cache dir---\"\nls -la /home/jovyan/scratch_space/midhun/surya_cache 2>&1 | head -30\necho \"---dmesg oom check---\"\ndmesg 2>&1 | grep -i -E \"oom|killed process\" | tail -20\necho \"---journalctl---\"\njournalctl -k --since \"-2 hours\" 2>&1 | grep -i oom | tail -20",
+              "description": "Check available memory, cache directory contents, and OOM kill evidence"
+            },
+            "selected_option_id": "allow-once",
+            "kind": "execute",
+            "permission_status": "resolved",
+            "permission_options": [
+              {
+                "option_id": "allow-once",
+                "name": "Yes",
+                "kind": "allow_once"
+              },
+              {
+                "kind": "allow_always",
+                "option_id": "allow-with-updates",
+                "name": "Yes, and allow surya_cache/ access and dmesg and journalctl -k --since \"-2 hours\" commands"
+              },
+              {
+                "option_id": "reject",
+                "name": "No",
+                "kind": "reject_once"
+              }
+            ],
+            "raw_output": "               total        used        free      shared  buff/cache   available\nMem:            30Gi        14Gi       5.3Gi       1.0Mi        11Gi        16Gi\nSwap:             0B          0B          0B\n---cache dir---\ntotal 2287692\ndrwxr-xr-x. 2 jovyan jovyan      6144 Sep 15 18:25 .\ndrwxr-xr-x. 4 jovyan jovyan      6144 Sep 14 17:59 ..\n-rw-r--r--. 1 jovyan jovyan 586721477 Sep 14 19:49 nasa-surya-bench__04ecbb0e430c6d548d365982b2c5b3d10ae5d8d8__20100515_0000.nc\n-rw-r--r--. 1 jovyan jovyan 585545410 Sep 15 18:25 nasa-surya-bench__136a06e738a3f35d33baf3a8c8b8687da8984354__20100518_0000.nc\n-rw-r--r--. 1 jovyan jovyan 585089508 Sep 14 19:47 nasa-surya-bench__1dd0d239adfe487cbc7787a2196d818a3e3d7d93__20100514_0000.nc\n-rw-r--r--. 1 jovyan jovyan 585221689 Sep 15 18:25 nasa-surya-bench__516b852e34f796b0db6f2268baa46e89cbdfa092__20100516_0000.nc\n---dmesg oom check---\n---journalctl---",
+            "session_id": "66397102-bff9-4b08-8066-fcf62070788a"
+          },
+          {
+            "kind": "execute",
+            "selected_option_id": "allow-once",
+            "raw_output": "741:        into place. The uniqueness matters: with ``num_workers>0`` and/or several DDP\n797:        The index is already in memory in the main process, so this check is cheap and",
+            "status": "completed",
+            "tool_call_id": "toolu_bdrk_018Ek8jbjtieG9J7jjFgbzBo",
+            "permission_options": [
+              {
+                "option_id": "allow-once",
+                "name": "Yes",
+                "kind": "allow_once"
+              },
+              {
+                "option_id": "allow-with-updates",
+                "name": "Yes, and allow access to datasets/ and similar commands",
+                "kind": "allow_always"
+              },
+              {
+                "kind": "reject_once",
+                "option_id": "reject",
+                "name": "No"
+              }
+            ],
+            "title": "grep -n -i \"memory\\|prefetch\\|num_workers\\|4096\" helio.py | head -60",
+            "raw_input": {
+              "description": "Check helio.py for existing memory/worker guidance",
+              "command": "grep -n -i \"memory\\|prefetch\\|num_workers\\|4096\" /home/jovyan/surya_workshop/workshop_infrastructure/datasets/helio.py | head -60"
+            },
+            "permission_status": "resolved",
+            "session_id": "66397102-bff9-4b08-8066-fcf62070788a"
+          }
+        ]
+      },
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "id": "d22893c3-71d8-4c9b-a9f1-3b8f45743199",
+      "body": "",
+      "type": "msg",
+      "mentions": [],
+      "time": 1789497470.955157,
+      "raw_time": false
+    },
+    {
+      "id": "e676932b-54d9-4d7b-912e-005c89645e70",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "mentions": [],
+      "raw_time": false,
+      "time": 1789498097.0352407,
+      "type": "msg",
+      "body": "Found it. The crash is memory exhaustion, not a bug in the cell's code \u2014 the logs and cache directory confirm it.\n\n**Evidence:**\n- Every log in `logs/data/*.log` ends mid-download, e.g. `Reading file s3://nasa-surya-bench/2010/05/20100518_0000.nc.` with no exception, no traceback, nothing after. That pattern \u2014 a worker just stops logging \u2014 is the signature of a process getting `SIGKILL`ed by the OOM killer, not a Python error.\n- The S3 cache (`/home/jovyan/scratch_space/midhun/surya_cache`) holds ~585 MB compressed `.nc` files, several downloaded in the same run (`20260915T182532Z`), matching multiple workers pulling data concurrently.\n- `free -h` shows only ~5.3 GiB free / ~16 GiB available right now, on a 30 GiB box that's shared with other users (the notebook itself warns \"we are sharing resources\").\n\n**Why it blows up memory:** `build_helio_dataloaders(..., num_workers=4)` sets `multiprocessing_context=\"spawn\"`, `persistent_workers=True`, and PyTorch's default `prefetch_factor=2`. So up to `4 workers \u00d7 2 prefetch = 8` full-resolution samples can be in flight simultaneously. Each sample is a 13-channel, 4096\u00d74096, float32 stack \u2014 `13*4096*4096*4 bytes \u2248 832 MiB` for the raw tensor alone, before the intermediate copies from decompressing the NetCDF and the signum-log/z-score normalization. That's easily 1.5\u20132+ GiB of transient memory per sample once you count intermediates. 8 of those in flight at once is well over 10 GiB just for this dataloader \u2014 on top of the S3 download itself, which uses `s3_boto3_max_concurrency: 4` threads \u00d7 `part_size_mb: 64` per worker, so 4 workers \u00d7 4 threads = 16 concurrent 64 MB download buffers too.\n\nOn a shared, memory-constrained JupyterHub container, that's enough to push the kernel (or a sibling process on the node) over its memory limit, and the OOM killer takes down the kernel \u2014 which looks like \"the server crashed\" with no Python-level error to explain it.\n\nThe `'''...'''` wrapping and the trailing comment (`# This code seems to crash cpu server`) confirm someone already hit this and disabled the cell as a workaround rather than a fix \u2014 it currently doesn't execute anything (it's just a string literal), so the pin_memory warning shown below it is stale output from an earlier run before the string wrap was added.\n\n**Fix, not workaround:** drop concurrency for this sanity check. In the notebook, either:\n- Call `build_helio_dataloaders(..., num_workers=0)` for this inspection (single-process, no spawn, no prefetch pile-up), or\n- Keep `num_workers=4` but lower `prefetch_factor` and check `max_number_of_samples=6` is actually being honored before the full loader spins up all workers.\n\nWant me to unwrap the cell and switch it to `num_workers=0` (or otherwise reduce concurrency) so it actually runs the shape check safely?"
+    },
+    {
+      "raw_time": false,
+      "time": 1789498141.0213983,
+      "metadata": {
+        "model": {
+          "settings": {},
+          "id": "sonnet"
+        },
+        "settings": {},
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona"
+      },
+      "type": "msg",
+      "id": "494024ed-cfd6-4962-848b-83e97521e8ed",
+      "body": "What is num_workers for?",
+      "sender": "smildred"
+    },
+    {
+      "type": "msg",
+      "time": 1789498151.5335472,
+      "id": "971e1ab6-60e0-4c89-b5b6-f24ee4c28470",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "body": "`num_workers` controls how many separate subprocesses PyTorch's `DataLoader` uses to fetch and prepare batches in the background, in parallel with your training/main loop.\n\n- `num_workers=0`: everything happens in the main process. When you call `next(iter(loader))`, the main process itself downloads the S3 file, decompresses the NetCDF, normalizes it, and hands you the tensor \u2014 one sample at a time, blocking.\n- `num_workers=N>0`: PyTorch spawns `N` separate processes. Each one independently calls `dataset.__getitem__()`, so `N` samples can be fetched/preprocessed concurrently instead of serially. While your training step is running on the GPU, the workers are already preparing the *next* batch, so the GPU doesn't sit idle waiting on I/O.\n\nThe point of it is to hide slow, CPU-bound or I/O-bound data loading (here: S3 download + NetCDF decompression + normalization) behind the compute of the previous batch. It helps most when loading a sample is slow relative to a training step \u2014 which is exactly this case, since each sample here is a ~800 MB+ 4096\u00d74096\u00d713 stack pulled from S3.\n\nThe catch, as we just saw, is that more workers means more samples in flight at once (`num_workers \u00d7 prefetch_factor`), which multiplies memory use. For a quick shape-check like `next(iter(train_data_loader))`, you're not pipelining anything \u2014 you only need one sample \u2014 so `num_workers=0` gets you the same result with a fraction of the memory footprint and no spawn overhead.",
+      "mentions": [],
+      "raw_time": false
+    },
+    {
+      "type": "msg",
+      "sender": "smildred",
+      "raw_time": false,
+      "body": "Check the output of this cell and can you explain what it means: {'ts': (2, 13, 1, 4096, 4096), 'time_delta_input': (2, 1), 'forecast': (2,), 'ds_index': 'list'}?",
+      "time": 1789498303.1014705,
+      "id": "884ea66d-0414-4732-b5b3-d1585db15a03",
+      "metadata": {
+        "settings": {},
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+        "model": {
+          "settings": {},
+          "id": "sonnet"
+        }
+      }
+    },
+    {
+      "body": "",
+      "mentions": [],
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "raw_time": false,
+      "id": "781bca92-6f63-4fda-876a-fc4e14afabf7",
+      "time": 1789498308.60386,
+      "type": "msg",
+      "metadata": {
+        "tool_calls": [
+          {
+            "raw_output": "339:        time_delta_input_minutes: List of candidate input time offsets in minutes, sorted ascending.\n341:            pool of historical offsets from which ``n_input_timestamps - 1`` frames are sampled\n346:        n_input_timestamps: Number of input frames to include per sample. Must be\n347:            \u2264 ``len(time_delta_input_minutes)``.\n390:            ``forecast`` and ``lead_time_delta`` in the returned sample. Set to False for downstream\n399:        time_delta_input_minutes: list[int],\n401:        n_input_timestamps: int,\n429:        self.n_input_timestamps = n_input_timestamps\n478:        self.time_delta_input_minutes = sorted(\n479:            np.timedelta64(t, \"m\") for t in time_delta_input_minutes\n534:            time_deltas = np.unique(self.time_delta_input_minutes + self.time_delta_target_minutes)\n536:            time_deltas = np.unique(self.time_delta_input_minutes)\n567:    def __getitem__(self, idx: int) -> dict:\n577:                time_delta_input (np.ndarray): (T,) \u2014 input time offsets in hours (relative to \"now\")\n580:                lead_time_delta (np.ndarray):  (L,) \u2014 lead times in hours (negative = future)\n611:        Samples historical input frames randomly from ``time_delta_input_minutes``,\n617:        # The last entry in time_delta_input_minutes is always the \"now\" frame (offset 0\n622:            sorted(random.sample(self.time_delta_input_minutes[:-1], self.n_input_timestamps - 1))\n623:            + [self.time_delta_input_minutes[-1]]\n633:        time_delta_input_float = (\n638:            \"ts\": stacked_inputs,\n639:            \"time_delta_input\": time_delta_input_float,\n646:            sample[\"lead_time_delta\"] = (\n651:            sample[\"ts\"] = np.flip(sample[\"ts\"], axis=-2).copy()",
+            "tool_call_id": "toolu_bdrk_01TBu64dDBrpYNnqBPhXvcck",
+            "raw_input": {
+              "description": "Find how helio.py builds ts and time_delta_input tensors",
+              "command": "grep -n \"def __getitem__\\|'ts'\\|\\\"ts\\\"\\|time_delta_input\\|lead_time_delta\\|n_input_timestamps\" /home/jovyan/surya_workshop/workshop_infrastructure/datasets/helio.py | head -60"
+            },
+            "kind": "execute",
+            "status": "completed",
+            "selected_option_id": "allow-once",
+            "permission_status": "resolved",
+            "title": "grep -n \"def __getitem__\\|'ts'\\|\\\"ts\\\"\\|time_delta_input\\|lead_time_delta\\|n_input_timestamps\" helio.py | head -60",
+            "permission_options": [
+              {
+                "option_id": "allow-once",
+                "kind": "allow_once",
+                "name": "Yes"
+              },
+              {
+                "name": "Yes, and allow access to datasets/ and similar commands",
+                "option_id": "allow-with-updates",
+                "kind": "allow_always"
+              },
+              {
+                "name": "No",
+                "kind": "reject_once",
+                "option_id": "reject"
+              }
+            ],
+            "session_id": "66397102-bff9-4b08-8066-fcf62070788a"
+          },
+          {
+            "locations": [
+              "/home/jovyan/surya_workshop/workshop_infrastructure/datasets/helio.py"
+            ],
+            "tool_call_id": "toolu_bdrk_01GgVnQhxMipKHhmf9zbvfg3",
+            "kind": "read",
+            "title": "Read helio.py (560 - 659)",
+            "selected_option_id": "allow-once",
+            "permission_status": "resolved",
+            "raw_input": {
+              "offset": 560.0,
+              "file_path": "/home/jovyan/surya_workshop/workshop_infrastructure/datasets/helio.py",
+              "limit": 100.0
+            },
+            "status": "completed",
+            "raw_output": "560\t    # Dataset interface\n561\t    # ------------------------------------------------------------------\n562\t\n563\t    def __len__(self) -> int:\n564\t        \"\"\"Return the number of valid reference timesteps in this dataset.\"\"\"\n565\t        return self.adjusted_length\n566\t\n567\t    def __getitem__(self, idx: int) -> dict:\n568\t        \"\"\"\n569\t        Load and return a single sample.\n570\t\n571\t        Args:\n572\t            idx: Dataset index.\n573\t\n574\t        Returns:\n575\t            Dictionary with keys:\n576\t                ts (np.ndarray):               (C, T, H, W) \u2014 input frames\n577\t                time_delta_input (np.ndarray): (T,) \u2014 input time offsets in hours (relative to \"now\")\n578\t            When ``load_forecast_frames=True`` (default), also includes:\n579\t                forecast (np.ndarray):         (C, L, H, W) \u2014 target frames\n580\t                lead_time_delta (np.ndarray):  (L,) \u2014 lead times in hours (negative = future)\n581\t            When ``use_latitude_in_learned_flow=True``, also includes:\n582\t                input_latitudes (list[float])\n583\t                forecast_latitude (list[float])  \u2014 only when ``load_forecast_frames=True``\n584\t        \"\"\"\n585\t        self._ensure_logger()\n586\t        self.logger.info(f\"Retrieving index {idx}.\")\n587\t        return self._get_index_data(idx)\n588\t\n589\t    # ------------------------------------------------------------------\n590\t    # Internal data loading\n591\t    # ------------------------------------------------------------------\n592\t\n593\t    def _load_and_stack_frames(self, timesteps) -> np.ndarray:\n594\t        \"\"\"Load, normalize, and stack NetCDF frames into a (C, T, H, W) array.\n595\t\n596\t        Args:\n597\t            timesteps: Sequence of timestamps; one NetCDF file is loaded per entry.\n598\t\n599\t        Returns:\n600\t            NumPy array of shape (C, T, H, W).\n601\t        \"\"\"\n602\t        return np.stack(\n603\t            [self.transform_data(self.load_nc_data(self.index.loc[ts, \"path\"], ts, self.channels))\n604\t             for ts in timesteps],\n605\t            axis=1,\n606\t        )\n607\t\n608\t    def _get_index_data(self, idx: int) -> dict:\n609\t        \"\"\"Build and return the sample dict for a single reference timestep.\n610\t\n611\t        Samples historical input frames randomly from ``time_delta_input_minutes``,\n612\t        applies channel masking and optional vertical flip, then assembles the sample\n613\t        dict described in ``__getitem__``.\n614\t        \"\"\"\n615\t        reference_timestep = self.valid_indices[idx]\n616\t\n617\t        # The last entry in time_delta_input_minutes is always the \"now\" frame (offset 0\n618\t        # relative to the reference timestep). The remaining n-1 input frames are sampled\n619\t        # randomly from the earlier offsets, giving the model varied historical context\n620\t        # across training steps.\n621\t        input_time_deltas = np.array(\n622\t            sorted(random.sample(self.time_delta_input_minutes[:-1], self.n_input_timestamps - 1))\n623\t            + [self.time_delta_input_minutes[-1]]\n624\t        )\n625\t        input_timesteps = reference_timestep + input_time_deltas\n626\t        stacked_inputs = self._load_and_stack_frames(input_timesteps)\n627\t\n628\t        if self.num_mask_aia_channels > 0 or self.drop_hmi_probability:\n629\t            stacked_inputs = self.masker(stacked_inputs)\n630\t\n631\t        # All time deltas are expressed relative to \"now\" (the last input frame), in hours.\n632\t        now_delta = input_time_deltas[-1]\n633\t        time_delta_input_float = (\n634\t            (now_delta - input_time_deltas) / np.timedelta64(1, \"h\")\n635\t        ).astype(np.float32)\n636\t\n637\t        sample = {\n638\t            \"ts\": stacked_inputs,\n639\t            \"time_delta_input\": time_delta_input_float,\n640\t        }\n641\t\n642\t        if self.load_forecast_frames:\n643\t            target_time_deltas = np.array(self.time_delta_target_minutes)\n644\t            target_timesteps = reference_timestep + target_time_deltas\n645\t            sample[\"forecast\"] = self._load_and_stack_frames(target_timesteps)\n646\t            sample[\"lead_time_delta\"] = (\n647\t                (now_delta - target_time_deltas) / np.timedelta64(1, \"h\")\n648\t            ).astype(np.float32)\n649\t\n650\t        if self.random_vert_flip and torch.bernoulli(torch.ones(()) / 2) == 1:\n651\t            sample[\"ts\"] = np.flip(sample[\"ts\"], axis=-2).copy()\n652\t            if self.load_forecast_frames:\n653\t                sample[\"forecast\"] = np.flip(sample[\"forecast\"], axis=-2).copy()\n654\t\n655\t        if self.use_latitude_in_learned_flow:\n656\t            from sunpy.coordinates.ephemeris import get_earth\n657\t\n658\t            sample[\"input_latitudes\"] = [get_earth(ts).lat.value for ts in input_timesteps]\n659\t            if self.load_forecast_frames:",
+            "permission_options": [
+              {
+                "option_id": "allow-once",
+                "kind": "allow_once",
+                "name": "Yes"
+              },
+              {
+                "kind": "allow_always",
+                "option_id": "allow-with-updates",
+                "name": "Yes, allow reading from datasets/ during this session"
+              },
+              {
+                "name": "No",
+                "kind": "reject_once",
+                "option_id": "reject"
+              }
+            ],
+            "session_id": "66397102-bff9-4b08-8066-fcf62070788a"
+          }
+        ]
+      }
+    },
+    {
+      "type": "msg",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "body": "Reading the shapes off `helio.py`'s `__getitem__` docstring (`ts: (C, T, H, W)` per sample) plus what `solar_Dataset` overrides, each key means:\n\n- **`ts`: `(2, 13, 1, 4096, 4096)`** \u2014 `(B, C, T, H, W)`. Batch of 2 (`cfg.batch_size`), 13 channels (8 AIA wavelengths + 5 HMI components), `T=1` input timestamp (`cfg.model.time_embedding.time_dim`), each a full-resolution 4096\u00d74096 solar image. This is the Surya input stack.\n\n- **`time_delta_input`: `(2, 1)`** \u2014 `(B, T)`. For each of the 2 samples, the offset (in hours, relative to the \"now\" frame) of each of the `T=1` input frames. Since there's only one input timestep and it *is* \"now\", every value here is `0.0`.\n\n- **`forecast`: `(2,)`** \u2014 one scalar per sample. This is *not* image frames \u2014 `solar_Dataset.__getitem__` (in `solar_event_dataset.py:124`) overwrites the base class's `forecast` key with the flare label (`Solar_Event_Occurrence`, cast to `float32`) matched from the flare catalog. `load_forecast_frames=False` is set by the dataset specifically so future Surya frames are never fetched, since this task supplies its own label instead of predicting future imagery.\n\n- **`ds_index`: `'list'`** \u2014 not a tensor, so PyTorch's default `collate_fn` left it as a plain Python list of length 2 (one string per sample). Each entry is the ISO-format timestamp from the flare catalog that this sample was matched to (`solar_event_dataset.py:125`) \u2014 useful for tracing a batch element back to a specific catalog row.\n\nSo the batch is well-formed: 2 samples, each a single 13-channel full-disk image plus a binary/scalar flare-occurrence target and its matched catalog timestamp \u2014 exactly what the regression baseline (`RegressionFlareModel`) expects as input/target.",
+      "id": "d9ba872e-22a3-48a8-addc-047d2b0575bf",
+      "raw_time": false,
+      "mentions": [],
+      "time": 1789498338.87919
+    }
+  ],
+  "users": {
+    "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona": {
+      "name": "Claude",
+      "initials": null,
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona",
+      "avatar_url": "/user/smildred/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3AClaudeAcpPersona",
+      "color": null,
+      "bot": true,
+      "display_name": "Claude"
+    },
+    "smildred": {
+      "bot": false,
+      "username": "smildred",
+      "mention_name": "smildred",
+      "name": "smildred",
+      "display_name": "smildred",
+      "initials": "s",
+      "avatar_url": null,
+      "color": "var(--jp-collaborator-color3)"
+    },
+    "jupyter-ai-personas::jupyter_ai_acp_client::CopilotAcpPersona": {
+      "color": null,
+      "bot": true,
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::CopilotAcpPersona",
+      "display_name": "Copilot",
+      "name": "Copilot",
+      "initials": null,
+      "avatar_url": "/user/smildred/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3ACopilotAcpPersona"
+    },
+    "jupyter-ai-personas::jupyter_ai_acp_client::CodexAcpPersona": {
+      "avatar_url": "/user/smildred/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3ACodexAcpPersona",
+      "initials": null,
+      "color": null,
+      "bot": true,
+      "name": "Codex",
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::CodexAcpPersona",
+      "display_name": "Codex"
+    },
+    "jupyter-ai-personas::jupyter_ai_jupyternaut::JupyternautPersona": {
+      "username": "jupyter-ai-personas::jupyter_ai_jupyternaut::JupyternautPersona",
+      "color": null,
+      "initials": null,
+      "avatar_url": "/user/smildred/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_jupyternaut%3A%3AJupyternautPersona",
+      "bot": true,
+      "display_name": "Jupyternaut",
+      "name": "Jupyternaut"
+    },
+    "jupyter-ai-personas::jupyter_ai_acp_client::MistralVibeAcpPersona": {
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::MistralVibeAcpPersona",
+      "display_name": "Mistral Vibe",
+      "initials": null,
+      "bot": true,
+      "name": "Mistral Vibe",
+      "color": null,
+      "avatar_url": "/user/smildred/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3AMistralVibeAcpPersona"
+    }
+  },
+  "attachments": {},
+  "metadata": {
+    "acp_session_ids": {
+      "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona": "66397102-bff9-4b08-8066-fcf62070788a"
+    },
+    "acp_config_options": {
+      "jupyter-ai-personas::jupyter_ai_acp_client::ClaudeAcpPersona": {
+        "model": "sonnet"
+      }
+    },
+    "id": "d5c354a1-6967-425e-a5c5-fe2a6ccefa1d"
+  }
+}
