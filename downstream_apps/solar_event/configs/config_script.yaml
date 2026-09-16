@@ -1,5 +1,6 @@
 # =============================================================================
-# Surya workshop — template fine-tuning config
+# Surya workshop — template fine-tuning config 
+# keeping it as is for future reference purpose
 #
 # Five sections own all parameters:
 #   data      — what to load and how to align labels
@@ -42,7 +43,7 @@ data:
   time_delta_input_minutes: [0]   # Offsets (minutes) of input frames relative to reference timestep
   time_delta_target_minutes: 60   # Step size (minutes) between forecast frames
 
-  # -- Downstream label alignment (flare catalog → Surya index) --
+  # -- Downstream label alignment (solar event catalog → Surya index) --
   solar_event_path: ../data/solar_event_data2.csv
   ds_time_column: Start_Date      # Column in the flare catalog used as the event timestamp
   ds_time_tolerance: 1d           # Max allowed gap between catalog and Surya timestamps
@@ -209,4 +210,4 @@ output:
 # -----------------------------------------------------------------------------
 logging:
   wandb_project: template_solar_event_identification
-  wandb_entity: null      # WandB team/org name; null to log to your personal account
+  wandb_entity: surya-ws2     # WandB team/org name; null to log to your personal account
