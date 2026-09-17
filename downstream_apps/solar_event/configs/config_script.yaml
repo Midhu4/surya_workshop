@@ -80,7 +80,7 @@ data:
   #
   # If none is set and the index contains s3:// paths, the run fails immediately with a
   # suggested path — not part-way through the first epoch. ~ and $ENV_VARS are expanded.
-  s3_cache_dir: /home/jovyan/scratch_space/midhun/surya_cache
+  s3_cache_dir: /home/jovyan/scratch_space/surya_cache
 
   # -- S3 transfer tuning --
   # These control boto3's multipart download: how many threads download parts in
@@ -126,14 +126,13 @@ model:
   init_weights: false
   checkpoint_layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   ensemble: null
-  nglo: 1
   time_embedding:
     type: linear        # Options: linear | fourier | perceiver
     n_queries: null     # Required for perceiver; unused otherwise
     time_dim: 1         # Number of input timesteps (must match time_delta_input_minutes length)
 
   # -- Fine-tuning head --
-  pooling: class_token  # Options: class_token | global_average | global_max | attention | transformer
+  pooling: global_average  # Options: class_token | global_average | global_max | attention | transformer
   penultimate_linear_layer: true
   dropout: 0.2
   freeze_backbone: false
