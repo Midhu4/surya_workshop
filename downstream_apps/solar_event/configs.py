@@ -46,7 +46,7 @@ class SolarDataConfig(DataConfig):
 
     # flare_index_path is a path, so it must join the base class's list to get the same
     # relative-to-the-config-file resolution. Extend this whenever you add a path field.
-    PATH_FIELDS: ClassVar[tuple[str, ...]] = DataConfig.PATH_FIELDS + ("flare_index_path",)
+    PATH_FIELDS: ClassVar[tuple[str, ...]] = DataConfig.PATH_FIELDS + ("solar_event_path",)
 
 
 # The app's entry point. Identical to load_config() except that the data: section is
