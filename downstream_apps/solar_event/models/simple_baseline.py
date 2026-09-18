@@ -67,7 +67,7 @@ class IdentificationModel(nn.Module):
         """
         x = x["ts"]
 
-        # Collapse input stack spatially and take absolute value for binary values of 0 or 1 based on the occurrence of the solar event
+        # Collapse input stack spatially and take maximum value for binary values of 0 or 1 based on the occurrence of the solar event
         x = x.mean(dim=[3, 4])
 
         # Rearrange in preparation for linear layer

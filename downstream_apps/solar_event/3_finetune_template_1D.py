@@ -123,12 +123,12 @@ def build_model(cfg: TrainingConfig, scalers, train_baseline: bool = False) -> L
     signum-log space; the HelioSpectformer path works directly on normalized inputs.
     """
     metrics = {
-        train_loss_metrics : SolarEventMetrics("train_loss")
+        "train_loss": SolarEventMetrics("train_loss"),
         # val_loss is the quantity logged as "val_loss" and used to pick the best checkpoint.
-        val_loss_metrics : SolarEventMetrics("val_loss")
-        train_evaluation_metrics : SolarEventMetrics("train_metrics")
+        "val_loss": SolarEventMetrics("val_loss"),
+        "train_metrics": SolarEventMetrics("train_metrics"),
         # Reported only: val_metrics do NOT influence checkpoint selection.
-        validation_evaluation_metrics : SolarEventMetrics("val_metrics")
+        "val_metrics": SolarEventMetrics("val_metrics"),
     }
 
     if train_baseline:

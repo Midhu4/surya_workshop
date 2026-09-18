@@ -47,7 +47,7 @@ data:
   solar_event_path: ../data/solar_event_data2.csv
   ds_time_column: Start_Date      # Column in the flare catalog used as the event timestamp
   ds_time_tolerance: 1d           # Max allowed gap between catalog and Surya timestamps
-  ds_match_direction: forward     # "forward": use solar state *before* the flare (causal)
+  ds_match_direction: forward     # "forward": use solar state *near* the flare
 
   # -- Local data (only needed when the index contains relative local paths) --
   # sdo_data_root_path: /path/to/sdo   # Prepended to relative local paths; ignored for s3://
@@ -144,7 +144,7 @@ model:
     lora_alpha: 8
     lora_dropout: 0.1
     bias: none
-    target_modules: [q_proj, v_proj, k_proj, out_proj, fc1, fc2]
+    target_modules: [fc1, fc2, attn.qkv, attn.proj]
 
 
 # -----------------------------------------------------------------------------
